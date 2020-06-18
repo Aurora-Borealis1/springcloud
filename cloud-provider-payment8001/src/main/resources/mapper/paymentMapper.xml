@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gongyuan.cloudproviderpayment8001.dao.PaymentDao">
+    <!--填写映射-->
+    <insert id="create" parameterType="com.gongyuan.cloudproviderpayment8001.model.Payment" useGeneratedKeys="true" keyProperty="id">
+        insert into payment (serial) values (#{serial})
+    </insert>
+    <select id="getPaymentById" resultMap="PaymentResultMap" >
+        select * from payment where id=#{id}
+    </select>
+    <resultMap id="PaymentResultMap" type="com.gongyuan.cloudproviderpayment8001.model.Payment">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="serial" property="serial" jdbcType="VARCHAR"/>
+    </resultMap>
+</mapper>

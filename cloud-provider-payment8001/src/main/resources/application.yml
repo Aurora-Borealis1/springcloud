@@ -1,0 +1,17 @@
+server:
+  port: 8001
+
+
+spring:
+  application:
+    name: cloud-payment-service  #服务名称
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  #当前数据源操作类型
+    url: jdbc:mysql://localhost:3306/springcloud?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: root
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.gongyuan.cloudproviderpayment8001.model  #所有model别名所在包
