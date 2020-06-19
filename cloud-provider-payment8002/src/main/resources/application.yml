@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 
 spring:
@@ -27,7 +27,5 @@ eureka:
       #defaultZone: http://localhost:7001/eureka
       defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/
   instance:
-    instance-id: payment8001
+    instance-id: payment8002
     prefer-ip-address: true
-    #发送心跳连接，默认是30s发一次
-    #lease-renewal-interval-in-seconds: 30
