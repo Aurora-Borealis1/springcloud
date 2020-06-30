@@ -72,4 +72,9 @@ public class PaymentController {
         }
         return serverPort;
     }
+
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin(){
+        return "hi,i'm paymentzipkin server fall back,nice to meet you O(∩_∩)O哈哈~";
+    }
 }
